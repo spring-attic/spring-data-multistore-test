@@ -17,6 +17,7 @@
 	<properties>
 		<spring.version>[3.0.7.RELEASE, 4.0.0.RELEASE)</spring.version>
 		<slf4j.version>1.6.1</slf4j.version>
+		<neo4j.version>1.6</neo4j.version>	
 	</properties>
 	
 	<profiles>
@@ -34,7 +35,7 @@
 				<sd.jpa.version>1.1.0.BUILD-SNAPSHOT</sd.jpa.version>
 				<sd.mongodb.version>1.1.0.BUILD-SNAPSHOT</sd.mongodb.version>
 				<sd.neo4j.version>2.1.0.BUILD-SNAPSHOT</sd.neo4j.version>
-				<neo4j.version>1.7-SNAPSHOT</neo4j.version>	
+				<neo4j.version>1.7-SNAPSHOT</neo4j.version>
 			</properties>
 			
 			<repositories>
@@ -52,7 +53,7 @@
 			<properties>
 				<sd.jpa.version>1.0.4.BUILD-SNAPSHOT</sd.jpa.version>
 				<sd.mongodb.version>1.0.2.BUILD-SNAPSHOT</sd.mongodb.version>
-				<sd.neo4j.version>2.0.2.BUILD-SNAPSHOT</sd.neo4j.version>	
+				<sd.neo4j.version>2.0.2.BUILD-SNAPSHOT</sd.neo4j.version>
 			</properties>
 			
 			<repositories>

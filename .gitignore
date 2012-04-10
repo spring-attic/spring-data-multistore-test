@@ -1,6 +1,6 @@
-neo4j/
-target/
-.settings/
-.project
-.classpath
-.springBeans
+/neo4j
+/target
+/.settings
+/.project
+/.classpath
+/.springBeans

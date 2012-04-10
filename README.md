@@ -21,6 +21,6 @@ The profiles can roughly be grouped into some defining the dependency versions f
 ## Usage
 The project can be built with profiles activated to produce the wanted set of dependencies. E.g. a Maven run with:
 
-mvn clean install -Pmilestones,fix-spring,3.1
+`mvn clean install -Pmilestones,fix-spring,3.1`
 
 Would run the project against the latest milestones of the Spring Data modules as well as Spring 3.1.1. 

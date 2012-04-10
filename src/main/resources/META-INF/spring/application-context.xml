@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:jpa="http://www.springframework.org/schema/data/jpa"
+	xmlns:neo4j="http://www.springframework.org/schema/data/neo4j"
+	xmlns:mongo="http://www.springframework.org/schema/data/mongo"
+	xmlns:jdbc="http://www.springframework.org/schema/jdbc"
+	xsi:schemaLocation="http://www.springframework.org/schema/jdbc http://www.springframework.org/schema/jdbc/spring-jdbc-3.1.xsd
+		http://www.springframework.org/schema/data/mongo http://www.springframework.org/schema/data/mongo/spring-mongo.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/data/jpa http://www.springframework.org/schema/data/jpa/spring-jpa.xsd
+		http://www.springframework.org/schema/data/neo4j http://www.springframework.org/schema/data/neo4j/spring-neo4j-2.0.xsd">
+
+
+	<!-- JPA -->
+
+	<jpa:repositories base-package="org.springframework.data.example.jpa" />
+	
+	<bean id="entityManagerFactory" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource">
+			<jdbc:embedded-database type="HSQL" />
+		</property>
+		<property name="persistenceUnitName" value="default" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter">
+				<property name="database" value="HSQL" />
+				<property name="generateDdl" value="true" /> 
+			</bean>
+		</property>
+	</bean>
+	
+	<bean id="jpaTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
+	</bean>
+	
+	<!-- Neo4J -->
+	
+	<neo4j:config storeDirectory="target/config-test"/>
+	<neo4j:repositories base-package="org.springframework.data.example.neo4j" />
+	
+	
+	<!-- MongoDB -->
+	
+	<bean id="mongoTemplate" class="org.springframework.data.mongodb.core.MongoTemplate">
+		<constructor-arg>
+			<mongo:db-factory />
+		</constructor-arg>
+	</bean>
+	
+	<mongo:repositories base-package="org.springframework.data.example.mongodb" />
+
+</beans>

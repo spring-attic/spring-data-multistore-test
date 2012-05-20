@@ -26,8 +26,8 @@ The project can be built with profiles activated to produce the wanted set of de
 Would run the project against the latest milestones of the Spring Data modules as well as Spring 3.1.1.
 
 ## Current state
-- *snapshots* - working
+- *snapshots* - [working](https://build.springsource.org/browse/SPRINGDATA-MULTISNAPSHOT)
 - *bugfix-snapshots* - failing
-- *milestones* - failing
+- *milestones* - [working](https://build.springsource.org/browse/SPRINGDATA-MULITMILESTONE)
 - *releases* - failing
-- *latest-releases* - failing
+- *latest-releases* - [working](https://build.springsource.org/browse/SPRINGDATA-MULITLATESTRELEASE)

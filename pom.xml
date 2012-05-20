@@ -16,7 +16,7 @@
 	<properties>
 		<spring.version>[3.0.7.RELEASE, 4.0.0.RELEASE)</spring.version>
 		<slf4j.version>1.6.1</slf4j.version>
-		<neo4j.version>1.6</neo4j.version>
+		<neo4j.version>1.7</neo4j.version>
 	</properties>
 
 	<profiles>
@@ -31,10 +31,9 @@
 			</activation>
 
 			<properties>
-				<sd.jpa.version>1.1.0.BUILD-SNAPSHOT</sd.jpa.version>
+				<sd.jpa.version>1.2.0.BUILD-SNAPSHOT</sd.jpa.version>
 				<sd.mongodb.version>1.1.0.BUILD-SNAPSHOT</sd.mongodb.version>
 				<sd.neo4j.version>2.1.0.BUILD-SNAPSHOT</sd.neo4j.version>
-				<neo4j.version>1.7-SNAPSHOT</neo4j.version>
 			</properties>
 
 			<repositories>
@@ -74,9 +73,9 @@
 			<id>milestones</id>
 
 			<properties>
-				<sd.jpa.version>1.1.0.RC1</sd.jpa.version>
-				<sd.mongodb.version>1.0.1.RELEASE</sd.mongodb.version>
-				<sd.neo4j.version>2.1.0.M1</sd.neo4j.version>
+				<sd.jpa.version>1.1.0.RELEASE</sd.jpa.version>
+				<sd.mongodb.version>1.1.0.M1</sd.mongodb.version>
+				<sd.neo4j.version>2.1.0.RC1</sd.neo4j.version>
 			</properties>
 
 			<repositories>
@@ -97,10 +96,10 @@
 			<id>releases</id>
 
 			<properties>
-				<sd.jpa.version>1.0.3.RELEASE</sd.jpa.version>
+				<sd.jpa.version>1.1.0.RELEASE</sd.jpa.version>
 				<sd.mongodb.version>1.0.1.RELEASE</sd.mongodb.version>
 				<sd.neo4j.version>2.0.1.RELEASE</sd.neo4j.version>
-				<sd.commons.version>1.2.1.RELEASE</sd.commons.version>
+				<sd.commons.version>1.3.0.RELEASE</sd.commons.version>
 			</properties>
 
 			<!-- Force latest SD Commons -->
@@ -129,9 +128,9 @@
 			<id>latest-releases</id>
 
 			<properties>
-				<sd.jpa.version>1.1.0.RC1</sd.jpa.version>
-				<sd.mongodb.version>1.0.1.RELEASE</sd.mongodb.version>
-				<sd.neo4j.version>2.1.0.M1</sd.neo4j.version>
+				<sd.jpa.version>1.1.0.RELEASE</sd.jpa.version>
+				<sd.mongodb.version>1.1.0.M1</sd.mongodb.version>
+				<sd.neo4j.version>2.1.0.RC1</sd.neo4j.version>
 			</properties>
 
 			<repositories>

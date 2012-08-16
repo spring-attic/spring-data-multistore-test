@@ -45,6 +45,10 @@
 					<id>neo4j-public-snapshot-repository</id>
 					<url>http://m2.neo4j.org/snapshots</url>
 				</repository>
+				<repository>
+					<id>neo4j-public-release-repository</id>
+					<url>http://m2.neo4j.org/releases</url>
+				</repository>
 			</repositories>
 
 		</profile>
@@ -180,6 +184,13 @@
 			</properties>
 		</profile>
 
+		<profile>
+			<id>spring-snapshots</id>
+			<properties>
+				<spring.version>3.2.0.BUILD-SNAPSHOT</spring.version>
+			</properties>
+		</profile>
+		
 
 		<!-- Explicitly state Spring dependencies in case we don't want to resolve 
 			them transitively -->

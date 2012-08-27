@@ -42,10 +42,6 @@
 					<url>http://repo.springsource.org/libs-snapshot</url>
 				</repository>
 				<repository>
-					<id>neo4j-public-snapshot-repository</id>
-					<url>http://m2.neo4j.org/snapshots</url>
-				</repository>
-				<repository>
 					<id>neo4j-public-release-repository</id>
 					<url>http://m2.neo4j.org/releases</url>
 				</repository>
@@ -57,8 +53,8 @@
 			<id>bugfix-snapshots</id>
 
 			<properties>
-				<sd.jpa.version>1.1.2.BUILD-SNAPSHOT</sd.jpa.version>
-				<sd.mongodb.version>1.0.4.BUILD-SNAPSHOT</sd.mongodb.version>
+				<sd.jpa.version>1.1.3.BUILD-SNAPSHOT</sd.jpa.version>
+				<sd.mongodb.version>1.0.5.BUILD-SNAPSHOT</sd.mongodb.version>
 				<sd.neo4j.version>2.0.2.BUILD-SNAPSHOT</sd.neo4j.version>
 			</properties>
 
@@ -77,9 +73,9 @@
 			<id>milestones</id>
 
 			<properties>
-				<sd.jpa.version>1.2.0.M1</sd.jpa.version>
-				<sd.mongodb.version>1.1.0.M2</sd.mongodb.version>
-				<sd.neo4j.version>2.1.0.RC2</sd.neo4j.version>
+				<sd.jpa.version>1.2.0.RC1</sd.jpa.version>
+				<sd.mongodb.version>1.1.0.RC1</sd.mongodb.version>
+				<sd.neo4j.version>2.1.0.RC3</sd.neo4j.version>
 			</properties>
 
 			<repositories>
@@ -100,8 +96,8 @@
 			<id>releases</id>
 
 			<properties>
-				<sd.jpa.version>1.1.1.RELEASE</sd.jpa.version>
-				<sd.mongodb.version>1.0.3.RELEASE</sd.mongodb.version>
+				<sd.jpa.version>1.1.2.RELEASE</sd.jpa.version>
+				<sd.mongodb.version>1.0.4.RELEASE</sd.mongodb.version>
 				<sd.neo4j.version>2.0.1.RELEASE</sd.neo4j.version>
 				<sd.commons.version>1.3.2.RELEASE</sd.commons.version>
 			</properties>
@@ -132,10 +128,10 @@
 			<id>latest-releases</id>
 
 			<properties>
-				<sd.jpa.version>1.2.0.M1</sd.jpa.version>
-				<sd.mongodb.version>1.1.0.M2</sd.mongodb.version>
-				<sd.neo4j.version>2.1.0.RC2</sd.neo4j.version>
-				<sd.commons.version>1.4.0.M1</sd.commons.version>
+				<sd.jpa.version>1.2.0.RC1</sd.jpa.version>
+				<sd.mongodb.version>1.1.0.RC1</sd.mongodb.version>
+				<sd.neo4j.version>2.1.0.RC3</sd.neo4j.version>
+				<sd.commons.version>1.4.0.RC1</sd.commons.version>
 			</properties>
 			
 			<dependencies>
@@ -361,5 +357,15 @@
 			</plugin>
 		</plugins>
 	</build>
+	
+	<repositories>
+		<repository>
+			<id>neo4j-public-release-repository</id>
+			<url>http://m2.neo4j.org/releases</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 
 </project>

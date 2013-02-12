@@ -26,6 +26,11 @@
 				<property name="generateDdl" value="true" /> 
 			</bean>
 		</property>
+		<property name="jpaProperties">
+			<props>
+				<prop key="javax.persistence.validation.mode">none</prop>
+			</props>
+		</property>
 	</bean>
 	
 	<bean id="jpaTransactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">

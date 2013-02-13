@@ -102,26 +102,18 @@
 				<sd.commons.version>1.5.0.RELEASE</sd.commons.version>
 			</properties>
 
-			<!-- Force latest SD Commons -->
+		</profile>
 
-			<dependencies>
-				<dependency>
-					<groupId>org.springframework.data</groupId>
-					<artifactId>spring-data-commons</artifactId>
-					<version>${sd.commons.version}</version>
-				</dependency>
-			</dependencies>
+		<profile>
+			<id>bugfix-releases</id>
 
-			<repositories>
-				<repository>
-					<id>spring-libs-release</id>
-					<url>http://repo.springsource.org/libs-release</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-			</repositories>
-
+			<properties>
+				<sd.jpa.version>1.2.1.RELEASE</sd.jpa.version>
+				<sd.mongodb.version>1.1.2.RELEASE</sd.mongodb.version>
+				<sd.neo4j.version>2.1.0.RELEASE</sd.neo4j.version>
+				<sd.commons.version>1.4.1.RELEASE</sd.commons.version>
+			</properties>
+			
 		</profile>
 
 		<profile>
@@ -314,7 +306,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.1.0.Final</version>
+			<version>4.1.9.Final</version>
 			<scope>runtime</scope>
 		</dependency>
 

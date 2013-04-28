@@ -4,7 +4,7 @@ Sample project to allow testing that the various Spring Data modules can be used
 
 ## Dependency sets
 
-The profiles can roughly be grouped into some defining the dependency versions for the Spring Data modules as well as ones to define the Spring version to be used. By default the latest snapshot versions of the next Spring Data milestones will be used as well as the snapshot version of the next major Spring version (3.2 as of the time of writing).
+The profiles can roughly be grouped into some defining the dependency versions for the Spring Data modules as well as ones to define the Spring version to be used. By default the latest snapshot versions of the next Spring Data milestones will be used as well as the snapshot version of the next major Spring version (4.0 as of the time of writing).
 
 ## Profiles
 
@@ -17,17 +17,17 @@ The profiles can roughly be grouped into some defining the dependency versions f
 - *fix-spring* - Fixes Spring dependencies to a version (requires one of the following profiles to be activated as well)
 - *3.0* - Includes latest Spring version of the 3.0 branch
 - *3.1* - Includes latest Spring version of the 3.1 branch
+- *3.2* - Includes latest Spring version of the 3.2 branch
 
 ## Usage
 The project can be built with profiles activated to produce the wanted set of dependencies. E.g. a Maven run with:
 
 `mvn clean install -Pmilestones,fix-spring,3.1`
 
-Would run the project against the latest milestones of the Spring Data modules as well as Spring 3.1.1.
+Would run the project against the latest milestones of the Spring Data modules as well as Spring 3.1.4.
 
 ## Current state
-- *snapshots* - [working](https://build.springsource.org/browse/SPRINGDATA-MULTISNAPSHOT)
-- *bugfix-snapshots* - failing
-- *milestones* - [working](https://build.springsource.org/browse/SPRINGDATA-MULITMILESTONE)
-- *releases* - failing
-- *latest-releases* - [working](https://build.springsource.org/browse/SPRINGDATA-MULITLATESTRELEASE)
+- *snapshots* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULTISNAPSHOT)
+- *milestones* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULITMILESTONE)
+- *releases* - working
+- *latest-releases* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULITLATESTRELEASE)

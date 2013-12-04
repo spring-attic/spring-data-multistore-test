@@ -12,22 +12,15 @@ The profiles can roughly be grouped into some defining the dependency versions f
 - *bugfix-snapshots* - Includes snapshots of the next bugfix releases of Spring Data modules
 - *milestones* - Includes latest milestones of upcoming versions of Spring Data modules
 - *releases* - Includes latest release versions of Spring Data modules
-- *latest-releases* - Includes latest release versions (either GA or milestones) of Spring Data modules
 
 - *fix-spring* - Fixes Spring dependencies to a version (requires one of the following profiles to be activated as well)
-- *3.0* - Includes latest Spring version of the 3.0 branch
-- *3.1* - Includes latest Spring version of the 3.1 branch
 - *3.2* - Includes latest Spring version of the 3.2 branch
+- *4.0* - Includes latest Spring version of the 4.0 branch
+- *spring-snapshots* - Includes the latest Spring snapshots (4.0 branch)
 
 ## Usage
 The project can be built with profiles activated to produce the wanted set of dependencies. E.g. a Maven run with:
 
-`mvn clean install -Pmilestones,fix-spring,3.1`
+`mvn clean install -Pmilestones,fix-spring,4.0`
 
-Would run the project against the latest milestones of the Spring Data modules as well as Spring 3.1.4.
-
-## Current state
-- *snapshots* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULTISNAPSHOT)
-- *milestones* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULITMILESTONE)
-- *releases* - working
-- *latest-releases* - [working](https://build.springsource.org/browse/SPRINGDATACMNS-MULITLATESTRELEASE)
+Would run the project against the latest milestones of the Spring Data modules as well as Spring 4.0.0.RC2.

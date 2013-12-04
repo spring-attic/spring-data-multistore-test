@@ -31,9 +31,10 @@
 			</activation>
 
 			<properties>
-				<sd.jpa.version>1.4.0.BUILD-SNAPSHOT</sd.jpa.version>
-				<sd.mongodb.version>1.3.0.BUILD-SNAPSHOT</sd.mongodb.version>
-				<sd.neo4j.version>2.3.0.BUILD-SNAPSHOT</sd.neo4j.version>
+				<sd.jpa.version>1.5.0.BUILD-SNAPSHOT</sd.jpa.version>
+				<sd.mongodb.version>1.4.0.BUILD-SNAPSHOT</sd.mongodb.version>
+				<sd.neo4j.version>3.0.0.BUILD-SNAPSHOT</sd.neo4j.version>
+				<spring.version>3.2.5.RELEASE</spring.version>
 			</properties>
 
 			<repositories>
@@ -53,9 +54,9 @@
 			<id>bugfix-snapshots</id>
 
 			<properties>
-				<sd.jpa.version>1.3.2.BUILD-SNAPSHOT</sd.jpa.version>
-				<sd.mongodb.version>1.2.2.BUILD-SNAPSHOT</sd.mongodb.version>
-				<sd.neo4j.version>2.2.2.BUILD-SNAPSHOT</sd.neo4j.version>
+				<sd.jpa.version>1.4.3.BUILD-SNAPSHOT</sd.jpa.version>
+				<sd.mongodb.version>1.3.3.BUILD-SNAPSHOT</sd.mongodb.version>
+				<sd.neo4j.version>2.3.3.BUILD-SNAPSHOT</sd.neo4j.version>
 			</properties>
 
 			<repositories>
@@ -73,9 +74,10 @@
 			<id>milestones</id>
 
 			<properties>
-				<sd.jpa.version>1.2.0.RC1</sd.jpa.version>
-				<sd.mongodb.version>1.1.0.RC1</sd.mongodb.version>
-				<sd.neo4j.version>2.1.0.RC3</sd.neo4j.version>
+				<sd.jpa.version>1.5.0.M1</sd.jpa.version>
+				<sd.mongodb.version>1.4.0.M1</sd.mongodb.version>
+				<sd.neo4j.version>3.0.0.M1</sd.neo4j.version>
+				<spring.version>3.2.5.RELEASE</spring.version>
 			</properties>
 
 			<repositories>
@@ -96,63 +98,13 @@
 			<id>releases</id>
 
 			<properties>
-				<sd.jpa.version>1.3.1.RELEASE</sd.jpa.version>
-				<sd.mongodb.version>1.2.1.RELEASE</sd.mongodb.version>
-				<sd.neo4j.version>2.2.1.RELEASE</sd.neo4j.version>
-				<sd.commons.version>1.5.1.RELEASE</sd.commons.version>
+				<sd.jpa.version>1.4.2.RELEASE</sd.jpa.version>
+				<sd.mongodb.version>1.3.2.RELEASE</sd.mongodb.version>
+				<sd.neo4j.version>2.3.2.RELEASE</sd.neo4j.version>
+				<sd.commons.version>1.6.2.RELEASE</sd.commons.version>
 			</properties>
 
 		</profile>
-
-		<profile>
-			<id>bugfix-releases</id>
-
-			<properties>
-				<sd.jpa.version>1.3.1.RELEASE</sd.jpa.version>
-				<sd.mongodb.version>1.2.1.RELEASE</sd.mongodb.version>
-				<sd.neo4j.version>2.2.1.RELEASE</sd.neo4j.version>
-				<sd.commons.version>1.5.1.RELEASE</sd.commons.version>
-			</properties>
-			
-		</profile>
-
-		<profile>
-			<id>latest-releases</id>
-
-			<properties>
-				<sd.jpa.version>1.3.1.RELEASE</sd.jpa.version>
-				<sd.mongodb.version>1.2.1.RELEASE</sd.mongodb.version>
-				<sd.neo4j.version>2.2.1.RELEASE</sd.neo4j.version>
-				<sd.commons.version>1.5.1.RELEASE</sd.commons.version>
-			</properties>
-			
-			<dependencies>
-				<dependency>
-					<groupId>org.springframework.data</groupId>
-					<artifactId>spring-data-commons</artifactId>
-					<version>${sd.commons.version}</version>
-				</dependency>
-			</dependencies>
-
-			<repositories>
-				<repository>
-					<id>spring-libs-milestone</id>
-					<url>http://repo.springsource.org/libs-milestone</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-				<repository>
-					<id>spring-libs-release</id>
-					<url>http://repo.springsource.org/libs-release</url>
-					<snapshots>
-						<enabled>false</enabled>
-					</snapshots>
-				</repository>
-			</repositories>
-
-		</profile>
-
 
 		<!-- Use latest Spring 3.1 version, requires fix-spring -->
 
@@ -171,7 +123,16 @@
 		<profile>
 			<id>3.2</id>
 			<properties>
-				<spring.version>3.2.2.RELEASE</spring.version>
+				<spring.version>3.2.5.RELEASE</spring.version>
+			</properties>
+		</profile>
+		
+		<!-- Use latest Spring 4.0 version, requires fix-spring -->
+		
+		<profile>
+			<id>4.0</id>
+			<properties>
+				<spring.version>4.0.0.RC2</spring.version>
 			</properties>
 		</profile>
 
@@ -283,7 +244,7 @@
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-entitymanager</artifactId>
-			<version>4.2.0.Final</version>
+			<version>4.2.7.SP1</version>
 			<scope>runtime</scope>
 		</dependency>
 

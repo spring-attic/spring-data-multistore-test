@@ -16,7 +16,6 @@
 	<properties>
 		<spring.version>3.1.4.RELEASE</spring.version>
 		<slf4j.version>1.7.5</slf4j.version>
-		<neo4j.version>1.7</neo4j.version>
 	</properties>
 
 	<profiles>
@@ -31,6 +30,7 @@
 			</activation>
 
 			<properties>
+				<sd.commons.version>1.7.0.BUILD-SNAPSHOT</sd.commons.version>
 				<sd.jpa.version>1.5.0.BUILD-SNAPSHOT</sd.jpa.version>
 				<sd.mongodb.version>1.4.0.BUILD-SNAPSHOT</sd.mongodb.version>
 				<sd.neo4j.version>3.0.0.BUILD-SNAPSHOT</sd.neo4j.version>
@@ -40,7 +40,7 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-snapshot</id>
-					<url>http://repo.springsource.org/libs-snapshot-local</url>
+					<url>http://repo.springsource.org/libs-snapshot</url>
 				</repository>
 				<repository>
 					<id>neo4j-public-release-repository</id>
@@ -54,6 +54,7 @@
 			<id>bugfix-snapshots</id>
 
 			<properties>
+				<sd.commons.version>1.6.3.BUILD-SNAPSHOT</sd.commons.version>
 				<sd.jpa.version>1.4.3.BUILD-SNAPSHOT</sd.jpa.version>
 				<sd.mongodb.version>1.3.3.BUILD-SNAPSHOT</sd.mongodb.version>
 				<sd.neo4j.version>2.3.3.BUILD-SNAPSHOT</sd.neo4j.version>
@@ -74,6 +75,7 @@
 			<id>milestones</id>
 
 			<properties>
+				<sd.commons.version>1.7.0.M1</sd.commons.version>
 				<sd.jpa.version>1.5.0.M1</sd.jpa.version>
 				<sd.mongodb.version>1.4.0.M1</sd.mongodb.version>
 				<sd.neo4j.version>3.0.0.M1</sd.neo4j.version>
@@ -98,6 +100,7 @@
 			<id>releases</id>
 
 			<properties>
+				<sd.commons.version>1.6.2.RELEASE</sd.commons.version>
 				<sd.jpa.version>1.4.2.RELEASE</sd.jpa.version>
 				<sd.mongodb.version>1.3.2.RELEASE</sd.mongodb.version>
 				<sd.neo4j.version>2.3.2.RELEASE</sd.neo4j.version>
@@ -134,6 +137,12 @@
 			<properties>
 				<spring.version>4.0.0.RC2</spring.version>
 			</properties>
+			<repositories>
+				<repository>
+					<id>spring-libs-milestone</id>
+					<url>http://repo.springsource.org/libs-milestone</url>
+				</repository>
+			</repositories>
 		</profile>
 
 		<profile>
@@ -141,6 +150,12 @@
 			<properties>
 				<spring.version>4.0.0.BUILD-SNAPSHOT</spring.version>
 			</properties>
+			<repositories>
+				<repository>
+					<id>spring-libs-snapshot</id>
+					<url>http://repo.springsource.org/libs-snapshot</url>
+				</repository>
+			</repositories>
 		</profile>
 		
 
@@ -210,6 +225,12 @@
 	</profiles>
 
 	<dependencies>
+	
+		<dependency>
+			<groupId>org.springframework.data</groupId>
+			<artifactId>spring-data-commons</artifactId>
+			<version>${sd.commons.version}</version>
+		</dependency>
 
 		<!-- Test (general) -->
 
@@ -222,7 +243,7 @@
 
 		<dependency>
 			<groupId>junit</groupId>
-			<artifactId>junit-dep</artifactId>
+			<artifactId>junit</artifactId>
 			<version>4.11</version>
 			<scope>test</scope>
 		</dependency>
@@ -271,12 +292,6 @@
 			<groupId>org.springframework.data</groupId>
 			<artifactId>spring-data-neo4j</artifactId>
 			<version>${sd.neo4j.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.neo4j</groupId>
-			<artifactId>neo4j-cypher</artifactId>
-			<version>${neo4j.version}</version>
 		</dependency>
 
 		<dependency>

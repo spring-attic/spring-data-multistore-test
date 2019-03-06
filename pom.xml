@@ -40,11 +40,11 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-snapshot</id>
-					<url>http://repo.springsource.org/libs-snapshot</url>
+					<url>https://repo.springsource.org/libs-snapshot</url>
 				</repository>
 				<repository>
 					<id>neo4j-public-release-repository</id>
-					<url>http://m2.neo4j.org/releases</url>
+					<url>https://m2.neo4j.org/releases</url>
 				</repository>
 			</repositories>
 
@@ -63,7 +63,7 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-snapshot</id>
-					<url>http://repo.springsource.org/libs-snapshot</url>
+					<url>https://repo.springsource.org/libs-snapshot</url>
 				</repository>
 			</repositories>
 
@@ -85,7 +85,7 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-milestone</id>
-					<url>http://repo.springsource.org/libs-milestone</url>
+					<url>https://repo.springsource.org/libs-milestone</url>
 					<snapshots>
 						<enabled>false</enabled>
 					</snapshots>
@@ -140,7 +140,7 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-milestone</id>
-					<url>http://repo.springsource.org/libs-milestone</url>
+					<url>https://repo.springsource.org/libs-milestone</url>
 				</repository>
 			</repositories>
 		</profile>
@@ -153,7 +153,7 @@
 			<repositories>
 				<repository>
 					<id>spring-libs-snapshot</id>
-					<url>http://repo.springsource.org/libs-snapshot</url>
+					<url>https://repo.springsource.org/libs-snapshot</url>
 				</repository>
 			</repositories>
 		</profile>
@@ -337,7 +337,7 @@
 	<repositories>
 		<repository>
 			<id>neo4j-public-release-repository</id>
-			<url>http://m2.neo4j.org/releases</url>
+			<url>https://m2.neo4j.org/releases</url>
 			<snapshots>
 				<enabled>false</enabled>
 			</snapshots>

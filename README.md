@@ -1,3 +1,5 @@
+# spring-data-multistore-test is no longer actively maintained by VMware, Inc.
+
 # Spring Data multi-store tests
 
 Sample project to allow testing that the various Spring Data modules can be used together. It consists of a set of Maven profiles that can be used to run the test case against a variety of dependency setups. The test case consists of a domain class and repository for Spring Data JPA, MongoDB and Neo4J.
